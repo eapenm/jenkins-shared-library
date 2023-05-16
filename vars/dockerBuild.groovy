@@ -9,6 +9,6 @@
 def call(String awsAccoutId,String region, String ecrRepoName){
     sh """
       docker build -t ${ecrRepoName} .
-      docker tag ${ecrRepoName}:latest ${awsAccoutId}.dkr.${region}.amazonaws.com/${ecrRepoName}:latest
+      docker tag ${ecrRepoName}:latest ${awsAccoutId}.dkr.ecr.${region}.amazonaws.com/${ecrRepoName}:latest
     """
 }
